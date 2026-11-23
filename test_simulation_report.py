@@ -7,3 +7,6 @@ def test_at_limit_passes():
 
 def test_over_limit_fails():
     assert classify_run(101) == "FAIL"
+    
+def test_negative_duration_is_invalid():
+    assert classify_run(-1) == "INVALID"
